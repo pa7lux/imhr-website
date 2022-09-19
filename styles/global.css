@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  max-width: 1500px;
+  margin: 0 auto;
+  font-family: var(--font-main);
+  font-feature-settings: 'ss01' on;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li,
+figure,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  border-bottom: 1px solid currentColor;
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+input,
+ 
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
