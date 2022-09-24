@@ -1,3 +1,18 @@
+@keyframes blink {
+
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Генеральные настройки блоков, создающих геометрию страницы */
 
 .article-page {
@@ -609,6 +624,78 @@
 .swiper-button-prev::after {
   background-image: url(../images/icons/prev.svg);
   
+}
+
+/* Конец */
+
+/* Плеер аудио */
+
+.player {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: calc(var(--size-unit) *2);
+  width: 58.13%;
+  margin: auto;
+  border-radius: calc(var(--size-unit) *2);
+  padding: calc(var(--size-unit) *1.5) calc(var(--size-unit) *2.5);
+  background-color: var(--accent-color);
+}
+
+.player::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(var(--size-unit) *0.9);
+  height: calc(var(--size-unit) *0.9);
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  transform: translate(-50%, 50%);
+}
+
+.player.is-playing::before {
+  animation: blink 0.8s linear infinite alternate;
+}
+
+.visually-hidden {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+}
+
+.player .player-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.player .player-btn:hover {
+  transform: scale(1.1);
+}
+
+.play-icon {
+  width: 32px;
+}
+
+.pause-icon {
+  width: 14px;
+}
+
+.player-title {
+  font-size: clamp(0.625rem, 0.4464rem + 0.8929vw, 1.25rem);
+  font-variation-settings: 'wght' 100;
 }
 
 /* Конец */
