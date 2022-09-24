@@ -9,7 +9,7 @@ body {
   max-width: 1500px;
   margin: 0 auto;
   font-family: var(--font-main);
-  font-feature-settings: 'ss01' on;
+  font-feature-settings: "ss01" on;
 }
 
 h1,
@@ -39,7 +39,6 @@ img {
 }
 
 input,
- 
 button,
 textarea,
 select {

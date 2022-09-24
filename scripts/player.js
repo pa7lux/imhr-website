@@ -1,4 +1,4 @@
-export const launchPlayer = function() {
+export const launchPlayer = function () {
   const allPlayers = Array.from(document.querySelectorAll(".player"));
   const playIconSvg = `<svg class="play-icon player-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 26 30">
                         <path fill="#001D3D" d="M24.0965 13.2794c1.3072.7747 1.3072 2.6665 0 3.4412l-21.0769 12.49c-1.3332.79-3.01960131-.1709-3.01960125-1.7206L-1.5e-7 2.50998C-1e-7 .960266 1.6864-.00065259 3.0196.789394L24.0965 13.2794Z"/>
@@ -58,5 +58,4 @@ export const launchPlayer = function() {
       }
     };
   }
-}
-
+};

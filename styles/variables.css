@@ -3,7 +3,11 @@
   --body-padding-top-bottom: 32px 0 32px;
   --content-section-width-main: 95.5%;
   --radius-main: 16px;
-  --size-unit: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem); /* from 16px to 12px */
+  --size-unit: clamp(
+    0.75rem,
+    0.6786rem + 0.3571vw,
+    1rem
+  ); /* from 16px to 12px */
   --inner-width-main: 58%;
   --header-height: 600px;
   --full-page-aspect-ratio: 1376/600;
@@ -13,12 +17,10 @@
 
   /* ТИПОГРАФИКА */
   --font-main: kyivtype, sans-serif;
-  --heading-weight-l: 'wght' 840, 'CONT' 0, 'MIDL' -1000;
+  --heading-weight-l: "wght" 840, "CONT" 0, "MIDL" -1000;
   --heading-size-l: clamp(1.25rem, 0.0357rem + 6.0714vw, 5.5rem);
   --text-color-main: #001d3d;
   --link-color-default: #0057b7;
-
-
 }
 
 .theme-turquoise {
@@ -53,7 +55,6 @@
   --accent-color: #86db99;
 }
 
-
 @media screen and (max-width: 650px) {
   :root {
     --inner-width-main: 80%;
@@ -63,6 +64,5 @@
     --right-arrow-shift: -2%;
     --left-arrow-shift: -3%;
     --heading-size-l: clamp(1.25rem, 0.57rem + 6.0714vw, 5.5rem);
-
   }
 }

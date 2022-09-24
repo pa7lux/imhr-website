@@ -1,5 +1,5 @@
-import {runSwiper} from "./scripts/slider";
-import {launchPlayer} from "./scripts/player"
+import { runSwiper } from "./scripts/slider";
+import { launchPlayer } from "./scripts/player";
 
-runSwiper('.swiper');
+runSwiper(".swiper");
 launchPlayer();
