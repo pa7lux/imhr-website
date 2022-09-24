@@ -437,7 +437,7 @@
 }
 
 .unordered-list-box li::marker {
-  content: "❇︎";
+  content: "•";
   font-size: clamp(0.625rem, 0.4464rem + 0.8929vw, 1.25rem);
   font-variation-settings: "wght" 350;
 }
