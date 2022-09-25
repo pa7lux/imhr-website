@@ -9,6 +9,7 @@ export default defineConfig({
         sasha: resolve(__dirname, "sasha.html"),
         vika: resolve(__dirname, "vika.html"),
         maks: resolve(__dirname, "maks.html"),
+        kate: resolve(__dirname, "kate.html"),
       },
     },
   },
