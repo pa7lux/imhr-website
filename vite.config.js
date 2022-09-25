@@ -10,6 +10,7 @@ export default defineConfig({
         vika: resolve(__dirname, "vika.html"),
         maks: resolve(__dirname, "maks.html"),
         kate: resolve(__dirname, "kate.html"),
+        nsasha: resolve(__dirname, "/ua/sasha.html"),
       },
     },
   },
