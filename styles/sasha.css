@@ -1,0 +1,19 @@
+.content-section {
+margin-bottom: 40px;
+
+
+}
+.author-media {
+display: flex;
+gap: 12px;
+align-items: center;
+border-bottom: 0;
+
+}
+
+.author-links {
+display: flex;
+flex-wrap: wrap;
+gap: 32px;
+margin-top: 16px;
+}
