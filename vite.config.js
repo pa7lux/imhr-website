@@ -11,6 +11,7 @@ export default defineConfig({
         maks: resolve(__dirname, "maks.html"),
         kate: resolve(__dirname, "kate.html"),
         nsasha: resolve(__dirname, "/ua/sasha.html"),
+        maksua: resolve(__dirname, "/ua/maks.html"),
       },
     },
   },
