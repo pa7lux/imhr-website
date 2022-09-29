@@ -12,6 +12,7 @@ export default defineConfig({
         kate: resolve(__dirname, "kate.html"),
         nsasha: resolve(__dirname, "/ua/sasha.html"),
         kateua: resolve(__dirname, "/ua/kate.html"),
+        maksua: resolve(__dirname, "/ua/maks.html"),
       },
     },
   },
