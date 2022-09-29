@@ -1,8 +1,8 @@
 :root {
   /* СЕКЦИИ */
-  --body-padding-top-bottom: 32px 0 32px;
+  --body-padding-top-bottom: 32px 0 80px;
   --content-section-width-main: 95.5%;
-  --radius-main: 16px;
+  --radius-main: 0.8rem;
   --size-unit: clamp(
     0.75rem,
     0.6786rem + 0.3571vw,
