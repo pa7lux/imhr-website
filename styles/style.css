@@ -39,10 +39,10 @@
 .heading-large {
   position: relative;
   width: fit-content;
-  padding: 0 2.3% 3.5% 0;
+  padding: 4% 6% 5%;
   color: var(--text-color-main);
   font-size: var(--heading-size-l);
-  line-height: 0.9;
+  line-height: 1;
   background-color: var(--accent-color);
   font-variation-settings: var(--heading-weight-l);
 }
@@ -51,7 +51,7 @@
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 26.2%;
   background-color: var(--text-color-main);
   transform: translateY(calc(-220%));
@@ -136,6 +136,7 @@
 .article-cover-two-columns--reversed .subheading {
   align-self: flex-end;
   width: 50%;
+  text-align: right;
 }
 
 .article-cover-two-columns--reversed .cover-image {
@@ -147,6 +148,31 @@
   box-shadow: -2.2vw 2.2vw 0 var(--accent-color);
   transform: translateX(2.2vw);
   aspect-ratio: 551/664;
+}
+@media (max-width: 1024px) {
+  .article-cover-two-columns--reversed {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 25%;
+  }
+  .article-cover-two-columns--reversed .heading-box {
+    position: absolute;
+    right: 2%;
+    bottom: -30%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    max-width: 85%;
+    order: 2;
+  }
+  .article-cover-two-columns--reversed .subheading {
+    width: 100%;
+  }
+  .article-cover-two-columns--reversed .cover-image {
+    width: calc(100% - 2.2vw);
+    aspect-ratio: 1376/900;
+    transform: translateX(0);
+  }
 }
 
 /* Конец */
@@ -250,7 +276,7 @@
 /* Секция с текстом лида */
 
 .article-lead {
-  padding-top: 4.4%;
+  padding-top: 7%;
 }
 
 .lead-paragraph {
@@ -272,11 +298,12 @@
 .vertical-photo-and-text {
   display: flex;
   gap: clamp(0.5rem, -0.2143rem + 3.5714vw, 3rem);
-  padding: 4.36% 8.5% 1.16%;
+  padding: 7% 8.5% 1.16%;
 }
 
 .image-box {
   width: 42.75%;
+  flex-shrink: 0;
 }
 
 .image-for-text {
@@ -287,7 +314,7 @@
   aspect-ratio: 437/630;
 }
 
-.text-box {
+.text-box:not(:first-of-type) {
   padding-top: clamp(0rem, -0.7143rem + 3.5714vw, 2.5rem);
 }
 
@@ -299,6 +326,17 @@
 
 .text-box .image-description-paragraph:not(:last-of-type) {
   margin-bottom: var(--size-unit);
+}
+
+@media screen and (max-width: 1024px) {
+  .vertical-photo-and-text {
+    flex-direction: column;
+    align-items: stretch;
+    gap: clamp(0.5rem, -0.2143rem + 4.9514vw, 3rem);
+  }
+  .vertical-photo-and-text .image-box {
+    width: calc(100% - 1.38vw);
+  }
 }
 
 /* Конец */
@@ -316,7 +354,7 @@
 .horizontal-photo-and-text {
   display: flex;
   gap: clamp(0.5rem, -0.2143rem + 3.5714vw, 3rem);
-  padding: 4.36% 8.5% 1.16%;
+  padding: 7% 8.5% 1.16%;
 }
 
 .horizontal-photo-and-text .image-for-text {
@@ -327,12 +365,23 @@
   width: 45%;
 }
 
+@media screen and (max-width: 1024px) {
+  .horizontal-photo-and-text {
+    flex-direction: column;
+    align-items: stretch;
+    gap: clamp(0.5rem, -0.2143rem + 4.9514vw, 3rem);
+  }
+  .horizontal-photo-and-text .image-box {
+    width: calc(100% - 1.38vw);
+  }
+}
+
 /* Конец */
 
 /* Секция с заголовком и разными текстовыми элементами, но всегда с заголовком */
 
 .heading-and-text {
-  padding-top: 4.4%;
+  padding-top: 5%;
 }
 
 .heading-and-text .heading-medium {
@@ -370,9 +419,11 @@
 .quote {
   position: relative;
   width: var(--inner-width-main);
-  margin-top: 5%;
+  margin-top: 7%;
+  margin-bottom: 5%;
   margin-right: auto;
   margin-left: auto;
+  padding-top: 1rem;
   font-size: clamp(1.25rem, 0.9643rem + 1.4286vw, 2.25rem);
   font-variation-settings: "wght" 840, "CONT" 0, "MIDL" -800;
 }
@@ -520,7 +571,7 @@
 
 .author-content {
   position: relative;
-  width: 48.8%;
+  width: 50%;
   margin: auto;
   padding-top: clamp(1.5rem, 1.0714rem + 2.1429vw, 3rem);
   padding-right: clamp(1.375rem, 0.9821rem + 1.9643vw, 2.75rem);
@@ -550,6 +601,17 @@
 
 .author-description {
   margin-bottom: var(--size-unit);
+}
+
+@media screen and (max-width: 1024px) {
+  .author-content {
+    width: calc(var(--inner-width-main) - 2vw);
+    padding-top: clamp(1.25rem, 0.732rem + 2.7624vw, 2.5rem);
+    padding-right: clamp(1.25rem, 0.732rem + 2.7624vw, 2.5rem);
+    padding-bottom: clamp(1.25rem, 0.732rem + 2.7624vw, 2.5rem);
+    padding-left: clamp(3.75rem, 2.7141rem + 5.5249vw, 6.25rem);
+    transform: translateX(2vw);
+  }
 }
 
 /* Конец */
@@ -711,6 +773,14 @@
 
 .mt-2 {
   margin-top: calc(2 * var(--size-unit));
+}
+
+.mt-3 {
+  margin-top: calc(3 * var(--size-unit));
+}
+
+.mt-4 {
+  margin-top: calc(4 * var(--size-unit));
 }
 
 .mb-1 {
