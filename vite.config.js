@@ -6,6 +6,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
+        about: resolve(__dirname, "about.html"),
         sasha: resolve(__dirname, "sasha.html"),
         vika: resolve(__dirname, "vika.html"),
         maks: resolve(__dirname, "maks.html"),
