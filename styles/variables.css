@@ -24,35 +24,35 @@
 }
 
 .theme-turquoise {
-  --accent-color: #8adbd3;
+  --accent-color: #98E2DB;
 }
 
 .theme-red {
-  --accent-color: #ec5a52;
+  --accent-color: #F0716A;
 }
 
 .theme-blue {
-  --accent-color: #5faef8;
+  --accent-color: #76BAF9;
 }
 
 .theme-purple {
-  --accent-color: #a67ff2;
+  --accent-color: #AE8BF4;
 }
 
 .theme-pink {
-  --accent-color: #f490b8;
+  --accent-color: #F49ABE;
 }
 
 .theme-yellow {
-  --accent-color: #efdf5d;
+  --accent-color: #F2E369;
 }
 
 .theme-orange {
-  --accent-color: #f19a60;
+  --accent-color: #F49F67;
 }
 
 .theme-green {
-  --accent-color: #86db99;
+  --accent-color: #99E1A2;
 }
 
 @media screen and (max-width: 650px) {
