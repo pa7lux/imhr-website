@@ -765,6 +765,48 @@
 
 /* Конец */
 
+/* О проекте */
+.about {
+  padding-top: calc(2 * var(--size-unit));
+}
+.about-heading {
+  width: var(--inner-width-main);
+  margin-bottom: calc(2 * var(--size-unit));
+  margin: auto;
+  color: var(--text-color-main);
+  font-size: var(--heading-size-l);
+  line-height: 1;
+  font-variation-settings: var(--heading-weight-l);
+}
+.about-lead {
+  width: var(--inner-width-main);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: calc(3 * var(--size-unit));
+  font-size: clamp(0.75rem, 0.5357rem + 1.0714vw, 1.5rem);
+  line-height: 1.5;
+  font-variation-settings: "wght" 500;
+}
+.about-paragraph {
+  width: var(--inner-width-main);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: calc(2 * var(--size-unit));
+  font-size: clamp(0.625rem, 0.4464rem + 0.8929vw, 1.25rem);
+  line-height: 1.5;
+  font-variation-settings: "wght" 150;
+}
+.about-second-heading {
+  width: var(--inner-width-main);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: calc(4 * var(--size-unit));
+  font-size: clamp(1.25rem, 0.75rem + 2.5vw, 3rem);
+  font-variation-settings: "wght" 700;
+  line-height: 1;
+}
+/* Конец */
+
 /* BOX */
 
 .mt-1 {
