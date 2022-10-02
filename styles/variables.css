@@ -64,5 +64,6 @@
     --right-arrow-shift: -2%;
     --left-arrow-shift: -3%;
     --heading-size-l: clamp(1.25rem, 0.57rem + 6.0714vw, 5.5rem);
+    --text-caption: clamp(0.625rem, 0.5179rem + 0.5357vw, 1rem);
   }
 }

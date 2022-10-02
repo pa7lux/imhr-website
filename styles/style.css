@@ -80,7 +80,7 @@
 .caption {
   margin-top: var(--size-unit);
   opacity: 0.7;
-  font-size: clamp(0.625rem, 0.5179rem + 0.5357vw, 1rem);
+  font-size: var(--text-caption);
   line-height: 1.5;
   font-variation-settings: "wght" 350;
 }
@@ -653,24 +653,34 @@
 }
 
 .swiper-pagination-bullet {
-  border-radius: 0;
+  border-radius: 2px;
   opacity: 0.2;
   background-color: var(--text-color-main);
-  transform: rotate(45deg);
+  transition: transform .4s, opacity .4s;
 }
 
 .swiper-pagination-bullet-active {
-  opacity: 1;
+  opacity: 0.6;
+  transform: rotate(135deg);
+}
+
+@media screen and (max-width: 650px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
 }
 
 .swiper-button-next,
 .swiper-button-prev {
   width: 12.8%;
-  height: 12.8%;
+  height: calc(100% - 2em);
+  top: calc(50% - 1em);
   margin-top: 0;
   border: none;
   background-color: transparent;
   transform: translateY(-50%);
+  font-size: var(--text-caption);
 }
 
 .swiper-button-next {
@@ -683,22 +693,54 @@
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
+  position: absolute;
   content: "";
-  right: 0;
-  width: 100%;
+  width: 0.8em;
   height: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-}
-
-.swiper-button-next::after {
-  background-image: url(../images/icons/next.svg);
+  transition: transform .5s;
 }
 
 .swiper-button-prev::after {
   background-image: url(../images/icons/prev.svg);
+  transform: translateX(-4px);
 }
+
+.swiper-button-next::after {
+  background-image: url(../images/icons/next.svg);
+  transform: translateX(4px);
+}
+
+.swiper-form  {
+  opacity: 0;
+  width: 8em;
+  transition: opacity .2s, transform .5s;
+}
+
+.swiper-button-next:hover .swiper-form,
+.swiper-button-prev:hover .swiper-form{
+  opacity: 1;
+  transform: rotate(360deg);
+}
+
+.swiper-button-prev:hover .swiper-form{
+  transform: translateX(-14px) rotate(-180deg);
+}
+
+.swiper-button-next:hover .swiper-form{
+  transform: translateX(14px) rotate(180deg);
+}
+
+.swiper-button-prev:hover::after {
+  transform: translateX(-14px);
+}
+
+.swiper-button-next:hover::after {
+  transform: translateX(14px);
+}
+
 
 /* Конец */
 
