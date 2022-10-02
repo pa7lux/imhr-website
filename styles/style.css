@@ -93,6 +93,7 @@
   position: relative;
   display: flex;
   justify-content: flex-end;
+  padding-bottom: 2.2vw;
 }
 
 .article-cover-two-columns .heading-box {
@@ -276,7 +277,7 @@
 /* Секция с текстом лида */
 
 .article-lead {
-  padding-top: 7%;
+  margin-top: calc(4 * var(--size-unit));
 }
 
 .lead-paragraph {
@@ -298,7 +299,7 @@
 .vertical-photo-and-text {
   display: flex;
   gap: clamp(0.5rem, -0.2143rem + 3.5714vw, 3rem);
-  padding: 7% 8.5% 1.16%;
+  padding: calc(4 * var(--size-unit)) 8.5% 0;
 }
 
 .image-box {
@@ -354,7 +355,8 @@
 .horizontal-photo-and-text {
   display: flex;
   gap: clamp(0.5rem, -0.2143rem + 3.5714vw, 3rem);
-  padding: 7% 8.5% 1.16%;
+  padding: 0 8.5%;
+  margin-top: calc(4 * var(--size-unit));
 }
 
 .horizontal-photo-and-text .image-for-text {
@@ -381,7 +383,7 @@
 /* Секция с заголовком и разными текстовыми элементами, но всегда с заголовком */
 
 .heading-and-text {
-  padding-top: 5%;
+  margin-top: calc(4 * var(--size-unit));
 }
 
 .heading-and-text .heading-medium {
@@ -419,8 +421,8 @@
 .quote {
   position: relative;
   width: var(--inner-width-main);
-  margin-top: 7%;
-  margin-bottom: 5%;
+  margin-top: calc(6 * var(--size-unit));
+  margin-bottom: calc(5 * var(--size-unit));
   margin-right: auto;
   margin-left: auto;
   padding-top: 1rem;
@@ -501,6 +503,9 @@
   width: 100%;
 }
 
+.image-block-full-page {
+  margin-top: calc(2 * var(--size-unit));
+}
 .image-block-full-page .caption {
   margin-top: clamp(0.5rem, 0.4286rem + 0.3571vw, 0.75rem);
 }
@@ -568,7 +573,9 @@
 /* Конец */
 
 /* Карточка автора */
-
+.author-block {
+  margin-top: calc(4 * var(--size-unit));
+}
 .author-content {
   position: relative;
   width: 50%;
@@ -620,6 +627,7 @@
 
 .slider-box {
   position: relative;
+  margin-top: calc(2 * var(--size-unit));
 }
 
 .swiper {
@@ -763,6 +771,13 @@
   font-variation-settings: "wght" 100;
 }
 
+/* Конец */
+
+/* Видео */
+.video {
+  margin-top: calc(2 * var(--size-unit));
+  margin-bottom: calc(4 * var(--size-unit));
+}
 /* Конец */
 
 /* BOX */
