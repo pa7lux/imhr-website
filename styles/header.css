@@ -36,7 +36,7 @@
   content: '';
   padding-right: 70%;
   aspect-ratio: 60/6;
-  background-color: #76BAF9;
+  background-color: var(--accent-color);
   position: absolute;
   left: 0;
   bottom: 0;

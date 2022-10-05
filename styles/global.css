@@ -10,6 +10,7 @@ body {
   margin: 0 auto;
   font-family: var(--font-main);
   font-feature-settings: "ss01" on;
+  background-color: #F5F5F5;
 }
 
 h1,
