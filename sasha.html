@@ -12,12 +12,36 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/sasha.css" />
     <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
   </head>
   <!-- Цветовую схему страницы можно задать через класс на body -->
   <body class="article-page theme-green">
+    <header class="header header--inner">
+      <div class="header-logo">
+        <a class="logo-link">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 59 18">
+            <path fill="#001D3D" d="M2.528 4.632h.24L4.928.119998H.368L2.528 4.632ZM.968 18h3.336V6H.968v12Zm7.26563 0h3.33597v-6.264c0-1.656 1.104-2.904 2.544-2.904 1.464 0 2.424 1.104 2.448 2.76V18h3.336v-6.264c0-1.656 1.104-2.904 2.568-2.904 1.44 0 2.424 1.104 2.424 2.76V18h3.36v-6.936c0-3.216-2.112-5.304-5.328-5.304-1.656 0-3.096.72-4.056 1.896-.864-1.2-2.256-1.896-3.96-1.896-1.464 0-2.736.6-3.624 1.632V6H8.23363v12Zm23.71877 0h3.336v-6.264c0-1.656 1.224-2.88 2.88-2.88 1.56 0 2.544 1.104 2.568 2.88V18h3.36v-6.792c0-3.288-2.112-5.448-5.232-5.448-1.44 0-2.664.48-3.576 1.344V.959999h-3.336V18Zm15.8437 0h3.336v-6.48c0-1.488 1.08-2.64 2.448-2.64 1.152 0 1.944.6 1.944 1.776v.48h3.336v-.816c0-2.856-1.896-4.56-4.464-4.56-1.416 0-2.688.6-3.552 1.608V6h-3.048v12Z"/>
+          </svg>
+        </a>
+      </div>
+      <nav class="main-menu">
+        <ul class="menu-list">
+          <li class="menu-list-item menu-list-item--active"><a href="/index.html" class="menu-link">Истории</a></li>
+          <li class="menu-list-item"><a href="/about.html" class="menu-link menu-link">О проекте</a></li>
+          <li class="menu-list-item"><a href="https://t.me/+tiiH3XpLUB03YWFi" target="_blank" class="menu-link menu-link">У меня есть история</a></li>
+        </ul>
+      </nav>
+      <nav class="lang-menu">
+        <ul class="lang-list">
+          <li><a href="#0" class="lang-link lang-link--active">UA</a></li>
+          <li class="divider" aria-hidden="true">|</li>
+          <li><a href="#0" class="lang-link">RU</a></li>
+        </ul>
+      </nav>
+    </header>
     
     <!-- Входная секция с картинкой слева -->
-    <section class="content-section article-cover-two-columns--reversed mt-2">
+    <section class="article-cover-two-columns--reversed mt-2">
       <div class="heading-box">
         <h1 class="heading-large">От&nbsp;Одессы до&nbsp;Тбилиси за&nbsp;4&nbsp;дня</h1>
         <p class="subheading mt-1">Рассказывает Саша Трач</p>
@@ -30,14 +54,14 @@
     <!-- Конец -->
 
     <!-- Секция с текстом лида, внутри сколько угодно абзацев -->
-    <section class="content-section article-lead">
+    <section class="article-lead">
       <p class="lead-paragraph">История нашего дорожного приключения. Бутерброды, Скуби-ду, курящий
         водитель и Лев-потрошитель.</p>
     </section>
     <!-- Конец -->
 
     <!-- Блок, когда вертикальная картинка справа, а текст слева -->
-    <div class="content-section vertical-photo-and-text">
+    <div class="vertical-photo-and-text">
       <div class="text-box">
         <p class="image-description-paragraph">24 февраля в 6 утра мне позвонила подруга и сказала: «Саша, началась война». Я сказала «Чтоооо?» и уснула дальше. Через несколько часов я в итоге проснулась и услышала взрывы. Я очень сильно испугалась — дома оставаться было страшно. На следующий день я стала уговаривать маму, чтобы мы поехали в Грузию. Моя мама — грузинка, и в Грузии у нас много родственников. Но она не была в восторге от этой идеи, потому что не знала, с кем оставить животных. Чтобы развеяться я пошла к соседке на ночёвку, а в это время мама упала с лестницы и сломала руку. Поэтому мама совсем ушла в отказ и не хотела куда-то ехать, но для моей тёти (одной из маминых сестёр) нет ничего невозможного — спустя неделю ей удалось уговорить маму. 18-19 марта мама велела мне собирать вещи. 20 марта утром мы поехали к Грузинскому посольству, примерно в 9:00 приехал папа с конфетами и колбасой, и мы попрощались.</p>
       </div>
@@ -52,16 +76,15 @@
     <!-- Конец -->
 
     <!-- Секция с заголовком и разными текстовыми элементами, но всегда с заголовком -->
-    <section class="heading-and-text content-section">
+    <section class="heading-and-text">
       <h2 class="heading-medium">Одесса-Кишенев</h2>
       <p class="heading-and-text-paragraph">Моя тетя сказала, что грузинское посольство организовало гражданам Грузии бесплатный выезд из Одессы. Но как назло мама поменяла гражданство на украинское и ей пришлось за все платить. Нас посадили в маленькую Газель с кучей багажа. Мы ехали примерно 4 часа до Кишинёва и там в грузинском посольстве нам сказали, что дальше мы пересядем в автобус до Бухареста. Во время поездки я чаще всего слушала этот трек.</p>
     </section>
     <!-- Конец -->
 
     <!-- Видео -->
-    <section class="content-section video">
+    <section class="video">
       <iframe
-        class="content-section"
         style="aspect-ratio: 16/9; width:100%;"
         src="https://www.youtube.com/embed/9syP_5Of0bc"
         title="YouTube video player"
@@ -73,14 +96,14 @@
     <!-- Конец -->
     
     <!-- Секция с заголовком и разными текстовыми элементами, но всегда с заголовком -->
-    <section class="heading-and-text content-section">
+    <section class="heading-and-text">
       <h2 class="heading-medium">Кишинев-Бухарест</h2>
       <p class="heading-and-text-paragraph">На границе Молдовы на таможне мы были дольше всего — примерно часов 5. Эта остановка была самой скучной, нас никто не встретил и мы чуть не умерли во время поездки от тесноты. Единственная радость была — поедание конфет. В скором времени нам сказали достать багаж и таможенники стали рыться в наших чемоданах. Одного из них, по имени Лев, мой брат обозвал Львом-потрошителем. Мы приехали ночью к посольству и там нас отвезли к следующему автобусу.</p>
     </section>
     <!-- Конец -->
 
     <!-- Блок с картинкой во всю ширину и подписью -->
-    <section class="content-section image-block-full-page">
+    <section class="image-block-full-page">
       <img
         class="box-radius picture-full-page"
         src="./images/sasha/bolgaria.jpg"
@@ -90,14 +113,14 @@
     <!-- Конец -->
 
     <!-- Секция с заголовком и разными текстовыми элементами, но всегда с заголовком -->
-    <section class="heading-and-text content-section">
+    <section class="heading-and-text">
       <h2 class="heading-medium">Бухарест-Стамбул</h2>
       <p class="heading-and-text-paragraph">На границе нас встретили волонтёры с едой, мы взяли фрукты и бутерброды и поехали дальше. В Бухаресте было очень много волонтёров и нас отвезли в отель для беженцев. Там нам дали отдохнуть 8 часов. В 19:00 приехал консул, забрал наши вещи и мы поехали к следующeму автобусу. Этот автобус был самым лучшим, там были планшеты с фильмами и играми. Я и мой двоюродный брат смотрели Скуби-ду и Дэдпул и играли в Candy crush и Temple Run всю ночь.</p>
     </section>
     <!-- Конец -->
 
     <!-- Блок с картинкой во всю ширину и подписью -->
-    <section class="content-section image-block-full-page">
+    <section class="image-block-full-page">
       <img
         class="box-radius picture-full-page"
         src="./images/sasha/stambyl.jpg"
@@ -107,14 +130,14 @@
     <!-- Конец -->
 
     <!-- Секция с заголовком и разными текстовыми элементами, но всегда с заголовком -->
-    <section class="heading-and-text content-section">
+    <section class="heading-and-text">
       <h2 class="heading-medium">Стамбул-Тбилиси</h2>
       <p class="heading-and-text-paragraph"> По приезду нас ждали приключения. Мы с 7 утра ждали консула, но к полудню нам сказали, что он не приедет совсем и нам пришлось самим ехать к автобусу. Нас встретил курящий водитель и куча других проблем. Мы очень долго ждали отправления, но когда мы наконец-то тронулись, я достала свои бутики с соком, и мы с двоюродным братом всю дорогу ели и спали. Мы ехали очень долго по горам. Было скучно, но наушники и музыка меня спасали. Мы с двоюродным братом фоткали всё и всех (в основном, на фоне гор, потому что ничего другого не было). Все были убитые от усталости. Мы приехали, когда уже стемнело. Нас встретила тетя, и мы поехали домой. Когда я зашла в квартиру, нас встретили родственники. Я была очень рада их видеть)). На этом закончилось мое четырёхдневное мучение.</p>
     </section>
     <!-- Конец -->
 
     <!-- Блок с карточкой автора -->
-    <div class="content-section author-block">
+    <div class="author-block">
       <div class="author-content box-radius">
         <svg
           class="author-image"
@@ -179,6 +202,12 @@
       </a>
     </div>
     <!-- Конец -->
+
+    </div>
+    <footer class="footer footer--inner">
+      <p class="copy">© IMHR 2022</p>
+      <p class="thanks">Особая благодарность прекрасной Грузии,<br>которая приютила всех ❤️</p>
+    </footer>
 
     <script src="./vendor/swiper/swiper.js"></script>
     <script type="module" src="/main.js"></script>

@@ -3,6 +3,10 @@
   gap: calc(3*var(--size-unit));
 }
 
+.header--inner {
+  margin-bottom: calc(5*var(--size-unit));
+}
+
 .header-logo {
   flex-grow: 1;
 }

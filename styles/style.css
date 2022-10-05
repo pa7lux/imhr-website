@@ -12,12 +12,6 @@
   }
 }
 
-/* Генеральные настройки блоков, создающих геометрию страницы */
-
-.article-page {
-  padding: var(--body-padding-top-bottom);
-}
-
 .content-section {
   width: var(--content-section-width-main);
   margin-right: auto;

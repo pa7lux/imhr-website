@@ -12,11 +12,36 @@
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
   </head>
   <!-- Цветовую схему страницы можно задать через класс на body -->
   <body class="article-page theme-purple">
+    <header class="header header--inner">
+      <div class="header-logo">
+        <a class="logo-link">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 59 18">
+            <path fill="#001D3D" d="M2.528 4.632h.24L4.928.119998H.368L2.528 4.632ZM.968 18h3.336V6H.968v12Zm7.26563 0h3.33597v-6.264c0-1.656 1.104-2.904 2.544-2.904 1.464 0 2.424 1.104 2.448 2.76V18h3.336v-6.264c0-1.656 1.104-2.904 2.568-2.904 1.44 0 2.424 1.104 2.424 2.76V18h3.36v-6.936c0-3.216-2.112-5.304-5.328-5.304-1.656 0-3.096.72-4.056 1.896-.864-1.2-2.256-1.896-3.96-1.896-1.464 0-2.736.6-3.624 1.632V6H8.23363v12Zm23.71877 0h3.336v-6.264c0-1.656 1.224-2.88 2.88-2.88 1.56 0 2.544 1.104 2.568 2.88V18h3.36v-6.792c0-3.288-2.112-5.448-5.232-5.448-1.44 0-2.664.48-3.576 1.344V.959999h-3.336V18Zm15.8437 0h3.336v-6.48c0-1.488 1.08-2.64 2.448-2.64 1.152 0 1.944.6 1.944 1.776v.48h3.336v-.816c0-2.856-1.896-4.56-4.464-4.56-1.416 0-2.688.6-3.552 1.608V6h-3.048v12Z"/>
+          </svg>
+        </a>
+      </div>
+      <nav class="main-menu">
+        <ul class="menu-list">
+          <li class="menu-list-item menu-list-item--active"><a href="/index.html" class="menu-link">Истории</a></li>
+          <li class="menu-list-item"><a href="/about.html" class="menu-link menu-link">О проекте</a></li>
+          <li class="menu-list-item"><a href="https://t.me/+tiiH3XpLUB03YWFi" target="_blank" class="menu-link menu-link">У меня есть история</a></li>
+        </ul>
+      </nav>
+      <nav class="lang-menu">
+        <ul class="lang-list">
+          <li><a href="#0" class="lang-link lang-link--active">UA</a></li>
+          <li class="divider" aria-hidden="true">|</li>
+          <li><a href="#0" class="lang-link">RU</a></li>
+        </ul>
+      </nav>
+    </header>
     <section
-      class="content-section article-cover-full-page black-and-white box-radius mt-2"
+      class="article-cover-full-page black-and-white box-radius mt-2"
     >
       <svg
         class="decor-1"
@@ -55,7 +80,7 @@
     <!-- Конец -->
 
     <!-- Секция с текстом лида, внутри сколько угодно абзацев -->
-    <section class="content-section article-lead">
+    <section class="article-lead">
       <p class="lead-paragraph">
       Привет, я Вика. Я приехала из Киева в Тбилиси 8 лет назад и живу здесь. Я не выезжала из Украины из-за войны, как это делали другие ребята. У меня много друзей и родственников в Киеве, я очень сочествую взрослым, детям и подросткам, которые находились и находится в Украине. В своей статья я решила обратить внимание на подростков в этот период. Я постоянно наблюдаю за своим окружением и понимаю, всем нужна поддержка. Сейчас это особенно важно.</p>
       <p class="lead-paragraph">
@@ -64,7 +89,7 @@
     </section>
 
     <!-- Блок, когда горизонтальная картинка слева, а текст справа -->
-    <div class="content-section horizontal-photo-and-text">
+    <div class="horizontal-photo-and-text">
       <figure class="image-box">
         <img
           class="image-for-text box-radius"
@@ -85,7 +110,7 @@
     </div>
     <!-- Конец -->
     <!-- Цитата, живёт вне секции или текстового блока -->
-    <blockquote class="quote content-section">
+    <blockquote class="quote ">
       <p>Если бы наши отношения с родителями стали хорошими и было
         взаимное понимание, мы с сестрой стали бы самыми счастливыми
         подростками на Земле.</p>
@@ -93,7 +118,7 @@
     <!-- Конец -->
 
     <!-- Блок, когда горизонтальная картинка справа, а текст слева -->
-    <div class="content-section horizontal-photo-and-text">
+    <div class="horizontal-photo-and-text">
       <div class="text-box mt-1">
         <p class="image-description-paragraph">
           У меня в семье всё сложно. Отец ушел из
@@ -119,13 +144,13 @@
     <!-- Конец -->
 
     <!-- Цитата, живёт вне секции или текстового блока -->
-    <blockquote class="quote content-section">
+    <blockquote class="quote ">
       <p>Если бы мама перестала меня ревновать, а одноклассники унижать, я бы вышла из замкнутого состояния, стала бы более открытой и начала доверять людям. Моя нервная система пришла бы в порядок.</p>
     </blockquote>
     <!-- Конец -->
 
     <!-- Блок, когда горизонтальная картинка слева, а текст справа -->
-    <div class="content-section horizontal-photo-and-text">
+    <div class="horizontal-photo-and-text">
       <figure class="image-box">
         <img
           class="image-for-text box-radius"
@@ -148,13 +173,13 @@
     <!-- Конец -->
 
     <!-- Цитата, живёт вне секции или текстового блока -->
-    <blockquote class="quote content-section">
+    <blockquote class="quote ">
       <p>Если бы родители интересовались моей жизнью и уважали мои интересы, я бы уважала их в ответ.</p>
     </blockquote>
     <!-- Конец -->
 
     <!-- Блок, когда горизонтальная картинка справа, а текст слева -->
-    <div class="content-section horizontal-photo-and-text">
+    <div class="horizontal-photo-and-text">
       <div class="text-box mt-1">
         <p class="image-description-paragraph">
           Мне 15 лет, половина моего детства прошла как сладкий сон, а после 8-ми всё перевернулось верх дном. Больше всех на свете я любила отца. У моих родителей испортились отношения, мы с сестрой очень переживали, часто слышали их крики. Мы понимали, что это конец их отношениям. Папа нам говорил, что мама ему изменяет. Я верила папе, не слушая маму. Один раз отец ворвался и начал избивать мать на моих глазах. Мне было 9, я начала кричать. На крик прибежали соседи, которые помогли моей маме.</p>
@@ -173,7 +198,7 @@
     <!-- Конец -->
 
         <!-- Блоки с абзацами без заголовка, нужны чтобы продолжать рассказ -->
-        <div class="single-text-box content-section mt-2">
+        <div class="single-text-box mt-2">
           <p class="single-paragraph">
             Проблема в том что я никак не могу забыть и отпустить прошлое, воспоминания о папе меня убивают, я не хотела чтобы всё так заканчивалось. С того момента прошло 7 лет, у меня уже есть отчим, есть брат. Но я бы всё отдала, чтобы вернуть в семью своего папу, хоть и знаю что это не возможно. Я бы хотела в следующей жизни пожелать себе полноценную здоровую семью.
           </p>
@@ -195,7 +220,7 @@
 
 
     <!-- Блок с карточкой автора -->
-    <div class="content-section author-block mt-2" style="margin-top: calc(4 * var(--size-unit))">
+    <div class="author-block mt-2" style="margin-top: calc(4 * var(--size-unit))">
       <div class="author-content box-radius">
         <svg
           class="author-image"
@@ -226,6 +251,10 @@
     </div>
     <!-- Конец -->
 
+    <footer class="footer footer--inner">
+      <p class="copy">© IMHR 2022</p>
+      <p class="thanks">Особая благодарность прекрасной Грузии,<br>которая приютила всех ❤️</p>
+    </footer>
     <script src="./vendor/swiper/swiper.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
