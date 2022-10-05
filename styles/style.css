@@ -12,12 +12,6 @@
   }
 }
 
-/* Генеральные настройки блоков, создающих геометрию страницы */
-
-.article-page {
-  padding: var(--body-padding-top-bottom);
-}
-
 .content-section {
   width: var(--content-section-width-main);
   margin-right: auto;
@@ -451,6 +445,10 @@
   margin-left: auto;
 }
 
+.single-text-box.common-font .single-paragraph {
+  font-variation-settings: inherit;
+}
+
 .single-paragraph {
   width: var(--inner-width-main);
   margin-right: auto;
@@ -630,6 +628,38 @@
   margin-top: calc(2 * var(--size-unit));
 }
 
+.slider-box.text-slider .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--accent-color);
+  color: #fff;
+  border-radius: var(--radius-main);
+  position: relative;
+  padding: calc(4 * var(--size-unit));
+  aspect-ratio: 3/2;
+}
+
+.slider-box.text-slider .swiper-slide p, .slider-box.text-slider .swiper-slide .heading-small {
+  width: 90%;
+}
+
+.slider-box.text-slider .swiper-slide::before {
+  content: 'Совет психолога';
+  position: absolute;
+  top: var(--size-unit);
+  left: var(--size-unit);
+  background-color: #fff;
+  color: var(--text-color-main);
+  padding: .2em .4em;
+  border-radius: var(--radius-main);
+}
+
+.slider-box.text-slider .swiper-pagination {
+  transform: initial;
+}
+
 .swiper {
   width: var(--slider-width);
   margin: auto;
@@ -650,6 +680,7 @@
   position: relative;
   margin-top: var(--size-unit);
   text-align: right;
+  transform: translateY(calc(-100% - 10px));
 }
 
 .swiper-pagination-bullet {
