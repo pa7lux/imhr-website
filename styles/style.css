@@ -645,6 +645,10 @@
   width: 90%;
 }
 
+.slider-box.text-slider {
+  height: 700px;
+}
+
 .slider-box.text-slider .swiper-slide::before {
   content: 'Совет психолога';
   position: absolute;
