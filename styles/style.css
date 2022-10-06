@@ -101,12 +101,37 @@
 .article-cover-two-columns .cover-image {
   position: relative;
   width: 48%;
-  margin-right: 8.5%;
   object-fit: cover;
   object-position: center;
   box-shadow: 2.2vw 2.2vw 0 var(--accent-color);
   transform: translateX(-2.2vw);
   aspect-ratio: 551/664;
+}
+
+@media (max-width: 1024px) {
+  .article-cover-two-columns {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 25%;
+  }
+  .article-cover-two-columns .heading-box {
+    position: absolute;
+    right: 2%;
+    bottom: -30%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    max-width: 85%;
+    order: 2;
+  }
+  .article-cover-two-columns .subheading {
+    width: 100%;
+  }
+  .article-cover-two-columns .cover-image {
+    width: calc(100% - 2.2vw);
+    aspect-ratio: 1376/900;
+    transform: translateX(0);
+  }
 }
 
 /* Конец */
@@ -188,7 +213,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: center;
+  object-position: center;
 }
+
+
 
 .article-cover-full-page::before {
   content: "";
@@ -623,6 +654,10 @@
 
 /* Слайдер */
 
+.swiper {
+  height: 100%;
+}
+
 .slider-box {
   position: relative;
   margin-top: calc(2 * var(--size-unit));
@@ -641,12 +676,25 @@
   aspect-ratio: 3/2;
 }
 
-.slider-box.text-slider .swiper-slide p, .slider-box.text-slider .swiper-slide .heading-small {
-  width: 90%;
+@media screen and (max-width: 600px) {
+  .slider-box.text-slider .swiper-slide {
+    padding: calc(1.5 * var(--size-unit));
+  }
 }
 
+.slider-box.text-slider .swiper-slide p, .slider-box.text-slider .swiper-slide .heading-small {
+  width: 100%;
+}
+
+
 .slider-box.text-slider {
-  height: 700px;
+  height: 600px;
+}
+
+@media screen and (max-width: 600px) {
+  .slider-box.text-slider {
+    height: 450px;
+  }
 }
 
 .slider-box.text-slider .swiper-slide::before {
@@ -659,14 +707,19 @@
   padding: .2em .4em;
   border-radius: var(--radius-main);
   line-height: 1;
+  font-size: clamp(0.625rem, 0.5572rem + 0.339vw, 0.875rem);
 }
+
+
 
 .slider-box.text-slider.text-slider-ua .swiper-slide::before {
   content: 'порада психолога';
 }
 
 .slider-box.text-slider .swiper-pagination {
-  transform: initial;
+  z-index: 1;
+  padding-right: calc(1.2 * var(--size-unit));
+  margin-top: 0;
 }
 
 .swiper {
@@ -689,7 +742,7 @@
   position: relative;
   margin-top: var(--size-unit);
   text-align: right;
-  transform: translateY(calc(-100% - 10px));
+  transform: translateY(calc(-100% - 0.5*var(--size-unit)));
 }
 
 .swiper-pagination-bullet {
