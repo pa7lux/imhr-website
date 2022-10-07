@@ -47,3 +47,7 @@ select {
   font-family: inherit;
   font-size: inherit;
 }
+
+body {
+  color: var(--text-color-main);
+}
