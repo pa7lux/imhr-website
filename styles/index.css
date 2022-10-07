@@ -158,6 +158,10 @@ body {
   transform: translateY(-0.5em);
 }
 
+.story-link:hover .story-info::before {
+  transform: translateY(-50%) scaleX(1.2);
+}
+
 .telegram-link {
   background-color: var(--accent-color);
   position: relative;
@@ -227,6 +231,8 @@ body {
   transform: translateY(-50%) scaleX(1);
   width: 34%;
   height: 0.8em;
+  transition: all .4s;
+  transform-origin: 0 center;
 }
 
 @media screen and (max-width: 600px) {
