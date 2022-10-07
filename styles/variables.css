@@ -9,6 +9,7 @@
     1rem
   ); /* from 16px to 12px */
   --inner-width-main: 58%;
+  --inner-width-large: 70%;
   --header-height: 600px;
   --full-page-aspect-ratio: 1376/600;
   --slider-width: 65.8%;
@@ -58,6 +59,7 @@
 @media screen and (max-width: 650px) {
   :root {
     --inner-width-main: 80%;
+    --inner-width-large: 80%;
     --full-page-aspect-ratio: 1376/900;
     --body-padding-top-bottom: 0 0 calc(2 * var(--size-unit));
     --slider-width: 90%;
