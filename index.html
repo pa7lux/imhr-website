@@ -53,7 +53,12 @@
       </nav>
     </header>
     <section class="cover">
-      <img src="./images/index/bg.jpg" alt="Фото редакции" class="cover-image">
+      <picture>
+        <source srcset="/images/index/cover_mobile_1x.jpg, /images/index/cover_mobile_2x.jpg 2x" media="(max-width: 600px)">
+        <source srcset="/images/index/cover_desktop_1x.jpg, /images/index/cover_desktop_2x.jpg 2x" media="(min-width: 601px)">
+        
+        <img src="/images/index/cover_desktop_1x.jpg" alt="Фото редакції" class="cover-image">
+      </picture>
       <div class="heading-box">
         <h1 class="cover-title">I am here</h1>
         <p class="cover-subheading">Підлітки з України<br>розповідають свої історії.</p>
