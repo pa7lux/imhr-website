@@ -3,11 +3,30 @@
     gap: 0.5rem;
     align-items: center;
     border-bottom: 0;
+    width: fit-content;
+    height: fit-content;
+
 }
 
 .author-links {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 1rem;
     margin-top: 1.5rem;
+}
+
+.author-media svg {
+    width: 18%;
+    height: 18%;
+}
+
+@media screen and (max-width: 600px) {
+    .author-media {
+        gap: 0.3rem;
+    }
+
+    .author-links {
+        gap: 0.5rem;
+    }
 }
