@@ -10,7 +10,7 @@
     grid-template-areas:
         "logo . lang"
         "menu menu menu";
-    gap: var(--size-unit);
+    gap: calc(1.5 * var(--size-unit));
   }
 }
 
