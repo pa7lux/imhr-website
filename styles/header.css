@@ -1,6 +1,31 @@
 .header {
   display: flex;
   gap: calc(3*var(--size-unit));
+  align-items: baseline;
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    display: grid;
+    grid-template-areas:
+        "logo . lang"
+        "menu menu menu";
+    gap: var(--size-unit);
+  }
+}
+
+.header-menu {
+  grid-area: menu;
+}
+
+.header-lang {
+  grid-area: lang;
+  justify-self: end;
+}
+
+.header-logo {
+  flex-grow: 1;
+  grid-area: logo;
 }
 
 .header--inner {
@@ -13,19 +38,15 @@
   }
 }
 
-.header-logo {
-  flex-grow: 1;
-}
-
 .logo-link {
   display: block;
-  width: 60px;
+  width: 64px;
   border-bottom: none;
 }
 
 @media screen and (max-width: 600px) {
   .logo-link {
-    width: 40px;
+    width: 56px;
   }
 }
 
@@ -66,7 +87,11 @@
 
 @media screen and (max-width: 600px) {
   .menu-list-item.menu-list-item--active::after {
-    transform: translateY(calc(100% + (0.3 * var(--size-unit))));
+    transform: translateY(calc(100% + (0.5 * var(--size-unit))));
+  }
+
+  .menu-list {
+    gap: calc(2*var(--size-unit));
   }
 }
 
@@ -75,11 +100,36 @@
   padding: 0.7em 0;
 }
 
-.menu-list-item.menu-list-item--active .menu-link:hover {
-  cursor: default;
+/* .menu-link--external {
+  padding-right: 1.2em;
+} */
+
+/* .menu-link--external::before,
+.menu-link--external::after {
+  content: '';
+  position: absolute;
 }
 
-.menu-list-item:not(.menu-list-item--active) .menu-link:hover {
+.menu-link--external::after {
+  top: calc(50% - 0.4em);
+  right: 0;
+  width: 0.6em;
+  height: 0.6em;
+  border-top: 0.08em solid currentColor;
+  border-right: 0.08em solid currentColor;
+  border-radius: 0 0 0 0.1em;
+}
+
+.menu-link--external::before {
+  top: calc(50% - 0.4em);
+  right: 0;
+  width: 0.6em;
+  height: 0.08em;
+  background-color: currentColor;
+  transform: rotateX(45deg);
+} */
+
+.menu-list-item .menu-link:hover {
   color: var(--link-color-default);
 }
 
@@ -89,13 +139,13 @@
 
 @media screen and (max-width: 800px) {
   .main-menu {
-    font-size: clamp(0.25rem, -0.25rem + 2.5vw, 1rem);
+    font-size: clamp(0.85rem, -0.25rem + 2.5vw, 1rem);
   }
 }
 
 .lang-menu {
   font-variation-settings: "wght" 0;
-  font-size: clamp(1rem, 0.9322rem + 0.339vw, 1.25rem);
+  font-size: clamp(1rem, 0.7322rem + 0.339vw, 1.25rem);
 }
 
 .lang-list {
@@ -122,6 +172,6 @@
 
 @media screen and (max-width: 800px) {
   .lang-menu {
-    font-size: clamp(0.25rem, -0.25rem + 2.5vw, 1rem);
+    font-size: clamp(0.85rem, -0.25rem + 2.5vw, 1rem);
   }
 }
