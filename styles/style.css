@@ -24,7 +24,13 @@
 
 .link {
   color: var(--link-color-default);
+  transition: opacity .3s;
 }
+
+.link:hover {
+  opacity: .6;
+}
+
 
 .box-radius {
   border-radius: var(--radius-main);
