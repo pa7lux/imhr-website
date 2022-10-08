@@ -755,7 +755,7 @@
 }
 
 .slider-box.text-slider .swiper-slide::before {
-  content: 'совет психолога';
+  content: 'комментарий психолога';
   position: absolute;
   top: calc(2 * var(--size-unit));
   left: calc(2 * var(--size-unit) - 0.9em);
@@ -770,7 +770,7 @@
 
 
 .slider-box.text-slider.text-slider-ua .swiper-slide::before {
-  content: 'порада психолога';
+  content: 'коментар психолога';
 }
 
 .slider-box.text-slider .swiper-pagination {
