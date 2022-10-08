@@ -685,11 +685,10 @@
 
 .author-heading {
   margin-bottom: clamp(0.5rem, 0.4286rem + 0.3571vw, 0.75rem);
-  font-family: KyivTypeSerif, serif;
   font-size: clamp(1.5rem, 1.0714rem + 2.1429vw, 3rem);
-  letter-spacing: 0.06em;
-  font-variation-settings: "wght" 700;
+  letter-spacing: 0.02em;
   font-feature-settings: "ss01" on;
+  font-variation-settings: "wght" 840, "CONT" 0, "MIDL" -800;
 }
 
 .author-description {
@@ -1010,7 +1009,7 @@
 /* Советы психолога */
 .advice-section {
   position: relative;
-  width: calc(var(--inner-width-main) + 4 * var(--size-unit));
+  width: calc(var(--content-section-width-main) / 100 * 65.84);
   padding: calc(3 * var(--size-unit)) calc(2 * var(--size-unit));
   margin-top: calc(5 * var(--size-unit));
   border-radius: var(--radius-main);
