@@ -21,7 +21,7 @@
   --heading-weight-l: "wght" 840, "CONT" 0, "MIDL" -1000;
   --heading-size-l: clamp(1.25rem, 0.0357rem + 6.0714vw, 5.5rem);
   --text-color-main: #001d3d;
-  --link-color-default: #0057b7;
+  --link-color-default: #0975e8;
 }
 
 .theme-turquoise {

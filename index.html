@@ -37,14 +37,14 @@
           </svg>
         </a>
       </div>
-      <nav class="main-menu">
+      <nav class="header-menu main-menu">
         <ul class="menu-list">
           <li class="menu-list-item menu-list-item--active"><a href="/index.html" class="menu-link">Історії</a></li>
           <li class="menu-list-item"><a href="/about.html" class="menu-link menu-link">Про проект</a></li>
           <li class="menu-list-item"><a href="https://t.me/+tiiH3XpLUB03YWFi" target="_blank" class="menu-link menu-link">У мене є історія</a></li>
         </ul>
       </nav>
-      <nav class="lang-menu">
+      <nav class="header-lang lang-menu">
         <ul class="lang-list">
           <li><a class="lang-link lang-link--active">UA</a></li>
           <li class="divider" aria-hidden="true">|</li>
@@ -53,7 +53,12 @@
       </nav>
     </header>
     <section class="cover">
-      <img src="./images/index/bg.jpg" alt="Фото редакции" class="cover-image">
+      <picture>
+        <source srcset="/images/index/cover_mobile_1x.jpg, /images/index/cover_mobile_2x.jpg 2x" media="(max-width: 600px)">
+        <source srcset="/images/index/cover_desktop_1x.jpg, /images/index/cover_desktop_2x.jpg 2x" media="(min-width: 601px)">
+        
+        <img src="/images/index/cover_desktop_1x.jpg" alt="Фото редакції" class="cover-image">
+      </picture>
       <div class="heading-box">
         <h1 class="cover-title">I am here</h1>
         <p class="cover-subheading">Підлітки з України<br>розповідають свої історії.</p>
