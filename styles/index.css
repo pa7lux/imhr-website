@@ -1,0 +1,447 @@
+body {
+  background-color: #F5F5F5;
+}
+
+.cover {
+  aspect-ratio: 1366/600;
+  position: relative;
+  margin-top: calc(2.5*var(--size-unit));
+  border-radius: var(--radius-main);
+}
+
+@media screen and (max-width: 600px) {
+  .cover {
+    aspect-ratio: 1/1;
+  }
+}
+
+.cover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 2px);
+  background-image: linear-gradient(194deg, rgba(0, 0, 0, 0) 41%, rgba(0, 0, 0, 0.8) 90%);
+  border-radius: var(--radius-main);
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--radius-main);
+  
+}
+
+.heading-box {
+  z-index: 2;
+  color: #fff;
+  position: absolute;
+  left: 4.8%;
+  bottom: 10%;
+}
+
+@media screen and (max-width: 600px) {
+  .heading-box {
+    left: 1rem;
+    bottom: 7%;
+  }
+}
+
+.cover-title {
+  font-size: var(--heading-size-l);
+  font-size: clamp(1rem, -0.6271rem + 8.1356vw, 7rem);
+  line-height: 0.9;
+  font-variation-settings: var(--heading-weight-l);
+  margin-bottom: var(--size-unit);
+  position: relative;
+  width: fit-content;
+  margin-left: -0.08em;
+}
+
+@media screen and (max-width: 600px) {
+  .cover-title {
+    font-size: clamp(1rem, -0.4271rem + 18.1356vw, 7rem);
+  }
+}
+
+.cover-title::after {
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 214 217'%3E%3Cpath stroke='%2376BAF9' stroke-linecap='round' stroke-width='6' d='M3 5.98394c30.1212-4.52269 48.4793-4.80073 71.6676 5.52786C100.416 22.9807 122.087 52.3135 119.33 81.3631c-2.02 21.2809-10.78 39.7529-31.1598 44.2219-28.1627 6.177-37.131-18.911-31.1599-37.6891 5.2732-16.5834 23.5629-30.2704 37.3918-35.1769 48.6829-17.273 90.3639-4.5228 109.0589 37.187 15.837 35.33 2.597 82.415-36.353 118.094'/%3E%3Cpath stroke='%2376BAF9' stroke-linecap='round' stroke-width='6' d='M166.979 176.326c-1.641 7.791-.991 22.096-2.653 29.985-1.106 5.251 8.537 3.653 8.537 3.653l27.247-4.938'/%3E%3C/svg%3E");
+  width: 37.6%;
+  height: 213.8%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: .6em;
+  right: 0;
+  transform: translateX(calc(100% + var(--size-unit)));
+}
+
+@media screen and (max-width: 600px) {
+  .cover-title::after {
+    content: none;
+  }
+}
+
+.cover-subheading {
+  opacity: 0.8;
+  font-size: clamp(0.25rem, -0.0212rem + 1.3559vw, 1.25rem);
+  line-height: 1.5;
+  font-variation-settings: "wght" 350;
+}
+
+@media screen and (max-width: 600px) {
+  .cover-subheading {
+    font-size: clamp(0.375rem, 0.2055rem + 3.8475vw, 1rem);
+  }
+}
+
+.stories {
+  padding-top: calc(4 * var(--size-unit));
+}
+
+.stories-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(2 * var(--size-unit));
+  list-style: none;
+}
+
+@media screen and (max-width: 600px) {
+  .stories-list {
+    grid-template-columns: 1fr;
+    gap: calc(1.5 * var(--size-unit));
+  }
+}
+
+.story {
+  aspect-ratio: 433/236;
+}
+
+@media screen and (max-width: 600px) {
+  .story {
+    aspect-ratio: initial;
+  }
+}
+
+.story--large {
+  grid-row: span 2;
+  aspect-ratio: initial;
+}
+
+@media screen and (max-width: 600px) {
+  .story--large {
+    aspect-ratio: initial;
+  }
+}
+
+.story--large .story-info {
+  flex-grow: 1;
+  width: 100%;
+  padding: clamp(0.5rem, 0.2288rem + 1.3559vw, 1.5rem);
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .story--large .story-info {
+    aspect-ratio: initial;
+    padding: 1.5rem 1rem;
+  }
+}
+
+.story-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-bottom: none;
+  border-radius: var(--radius-main);
+  background-color: #fff;
+  transition: all .3s;
+}
+
+.story-link:hover {
+  box-shadow: 0px 12px 32px rgba(0, 29, 61, 0.12);
+  transform: translateY(-0.5em);
+}
+
+.story-link:hover .story-info::before {
+  transform: translateY(-50%) scaleX(1.2);
+}
+
+.telegram-link {
+  background-color: var(--accent-color);
+  position: relative;
+}
+
+.telegram-link .story-graphics {
+  overflow: visible;
+}
+
+@media screen and (max-width: 600px) {
+  .telegram-link::after {
+    width: 60%;
+    left: initial;
+    right: 0;
+  }
+}
+
+.story-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-graphics {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.story-image {
+  display: block;
+  aspect-ratio: 434/325;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(100%);
+  border-top-left-radius: var(--radius-main);
+  border-top-right-radius: var(--radius-main);
+}
+
+@media screen and (max-width: 600px) {
+  .story-image {
+    aspect-ratio: 434/220;
+  }
+}
+
+.story-info {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 
+    clamp(0.5rem, 0.0932rem + 2.0339vw, 2rem) 
+    clamp(0.5rem, 0.2288rem + 1.3559vw, 1.5rem) 
+    clamp(0.5rem, 0.2288rem + 1.3559vw, 1.5rem);
+  z-index: 1;
+}
+
+.story-info::before {
+  content: '';
+  background-color: var(--accent-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-50%) scaleX(1);
+  width: 34%;
+  height: 0.8em;
+  transition: all .4s;
+  transform-origin: 0 center;
+}
+
+@media screen and (max-width: 600px) {
+  .story-info {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .story-info::before {
+    width: 24%;
+    height: 0.6em;
+  }
+}
+
+.telegram-link .story-info::before {
+  content: none;
+}
+
+
+
+.story-title {
+  font-variation-settings: "wght" 700;
+  font-size: clamp(0.75rem, 0.411rem + 1.6949vw, 2rem);
+  margin-bottom: clamp(0.5rem, 0.2288rem + 1.3559vw, 1.5rem);
+}
+
+@media screen and (max-width: 800px) {
+  .story-title {
+    font-size: clamp(0.75rem, 0.411rem + 1.2vw, 1.4rem);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .story-title {
+    font-size: clamp(1rem, 0.7rem + 3.6949vw, 2rem);
+    margin-bottom: 1.5rem;
+  }
+}
+
+.story-author {
+  font-variation-settings: "wght" 150;
+  font-size: clamp(0.375rem, 0.2055rem + 0.8475vw, 1rem);
+  opacity: .5;
+}
+
+@media screen and (max-width: 600px) {
+  .story-author {
+    font-variation-settings: "wght" 150;
+    font-size: clamp(0.375rem, 0.2055rem + 3.8475vw, 1rem);
+    opacity: .5;
+  }
+}
+
+
+.thanks {
+  text-align: right;
+}
+
+
+
+/* ////////////////////////////
+// СВГ анимашки /////////////*/
+
+.svg {
+  position: absolute;
+  height: 100%;
+  z-index: 0;
+}
+
+
+/* Сердечко */
+
+.svg.svg-heart {
+  width: 50%;
+  right: -3%;
+  bottom: -12%;
+}
+
+.svg path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.svg.svg-heart path:first-child {
+  animation-duration: 1s;
+}
+
+.svg.svg-heart path:not(:first-child) {
+  animation-duration: 3s;
+  animation-delay: .3s;
+}
+
+.svg.svg-heart path:first-child {
+  animation-duration: 1s;
+}
+
+
+/* рюкзак */
+
+.svg.svg-bag {
+  width: 45%;
+  right: 3%;
+  bottom: -12%;
+}
+
+.svg.svg-bag path:not(:first-child) {
+  animation-duration: 3s;
+  animation-delay: .3s;
+}
+
+.svg.svg-bag path:first-child {
+  animation-duration: 1s;
+}
+
+/* греча */
+
+.svg.svg-grecha {
+  width: 38%;
+  right: 5%;
+  bottom: -15%;
+}
+
+.svg.svg-grecha path {
+  animation-duration: 1.2s;
+}
+
+/* Z-Z-Z */
+
+.svg.svg-zzz {
+  width: 38%;
+  height: 40%;
+  top: -9%;
+  right: 16%;
+}
+
+.svg.svg-zzz path {
+  animation-duration: 2s;
+}
+
+.svg.svg-zzz path:nth-child(2) {
+  animation-delay: .15s;
+}
+
+.svg.svg-zzz path:nth-child(3) {
+  animation-delay: .3s;
+}
+
+.story-link:hover .svg path {
+  animation-name: svgAnimation;
+}
+
+/* telegram  */
+
+.svg.svg-telegram {
+  bottom: -34%;
+  left: 8%;
+  width: 90%;
+  height: 100%;
+}
+
+.svg.svg-telegram path:nth-child(1) {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+}
+
+.svg.svg-telegram path:nth-child(2) {
+  stroke-dasharray: 530 40;
+  stroke-dashoffset: 0;
+  animation-duration: 2s;
+}
+
+.story-link:hover .svg-telegram path:nth-child(2) {
+  animation-name: svgAnimationTelegram;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@media screen and (max-width: 600px) {
+  .svg.svg-telegram {
+    left: 36%;
+    width: 60%;
+  }
+}
+
+
+
+@keyframes svgAnimation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes svgAnimationTelegram {
+  to {
+    stroke-dashoffset:  1140;
+  }
+}

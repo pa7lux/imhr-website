@@ -1,0 +1,35 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(0.6rem, 0.0466rem + 1.0169vw, 1rem);
+}
+
+.footer--index {
+  margin-top: calc(10*var(--size-unit));
+}
+
+.thanks {
+  text-align: right;
+}
+
+@media screen and (max-width: 800px) {
+  .footer--index {
+    margin-top: calc(8*var(--size-unit));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer--index {
+    margin-top: calc(6*var(--size-unit));
+  }
+}
+
+.footer--inner {
+  margin-top: calc(5*var(--size-unit));
+}
+
+@media screen and (max-width: 800px) {
+  .footer--inner {
+    margin-top: calc(6*var(--size-unit));
+  }
+}

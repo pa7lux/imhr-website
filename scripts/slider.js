@@ -3,6 +3,8 @@ export function runSwiper(className) {
     // Optional parameters
     direction: "horizontal",
     loop: true,
+    spaceBetween: 8,
+    
 
     // If we need pagination
     pagination: {

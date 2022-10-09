@@ -12,12 +12,6 @@
   }
 }
 
-/* Генеральные настройки блоков, создающих геометрию страницы */
-
-.article-page {
-  padding: var(--body-padding-top-bottom);
-}
-
 .content-section {
   width: var(--content-section-width-main);
   margin-right: auto;
@@ -30,7 +24,13 @@
 
 .link {
   color: var(--link-color-default);
+  transition: opacity .3s;
 }
+
+.link:hover {
+  opacity: .6;
+}
+
 
 .box-radius {
   border-radius: var(--radius-main);
@@ -39,7 +39,7 @@
 .heading-large {
   position: relative;
   width: fit-content;
-  padding: 4% 6% 5%;
+  padding: 2% 6% 3%;
   color: var(--text-color-main);
   font-size: var(--heading-size-l);
   line-height: 1;
@@ -51,11 +51,16 @@
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   width: 26.2%;
   background-color: var(--text-color-main);
   transform: translateY(calc(-220%));
   aspect-ratio: 180/24;
+}
+
+.article-cover-two-columns--reversed .heading-large::before {
+  right: 0;
+  left: initial;
 }
 
 .heading-medium {
@@ -80,7 +85,7 @@
 .caption {
   margin-top: var(--size-unit);
   opacity: 0.7;
-  font-size: clamp(0.625rem, 0.5179rem + 0.5357vw, 1rem);
+  font-size: var(--text-caption);
   line-height: 1.5;
   font-variation-settings: "wght" 350;
 }
@@ -93,6 +98,7 @@
   position: relative;
   display: flex;
   justify-content: flex-end;
+  padding-bottom: 2.2vw;
 }
 
 .article-cover-two-columns .heading-box {
@@ -106,12 +112,37 @@
 .article-cover-two-columns .cover-image {
   position: relative;
   width: 48%;
-  margin-right: 8.5%;
   object-fit: cover;
   object-position: center;
   box-shadow: 2.2vw 2.2vw 0 var(--accent-color);
   transform: translateX(-2.2vw);
   aspect-ratio: 551/664;
+}
+
+@media (max-width: 1024px) {
+  .article-cover-two-columns {
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 25%;
+  }
+  .article-cover-two-columns .heading-box {
+    position: absolute;
+    right: 2%;
+    bottom: -30%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    max-width: 85%;
+    order: 2;
+  }
+  .article-cover-two-columns .subheading {
+    width: 100%;
+  }
+  .article-cover-two-columns .cover-image {
+    width: calc(100% - 2.2vw);
+    aspect-ratio: 1376/900;
+    transform: translateX(0);
+  }
 }
 
 /* Конец */
@@ -193,14 +224,24 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: center;
+  object-position: center;
 }
 
+
+
+.article-cover {
+  position: relative;
+}
 .article-cover-full-page::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
-  background-color: rgb(0 0 0 / 0.24);
+  background-color: #001D3D;
+  opacity: 0.3;
 }
 
 .article-cover-full-page .heading-box {
@@ -213,7 +254,7 @@
 
 .heading-large--full-page {
   font-size: var(--heading-size-l);
-  line-height: 0.9;
+  line-height: 1;
   font-variation-settings: var(--heading-weight-l);
 }
 
@@ -222,6 +263,11 @@
   font-size: clamp(0.625rem, 0.4464rem + 0.8929vw, 1.25rem);
   line-height: 1.5;
   font-variation-settings: "wght" 350;
+  background-color: #001D3D;
+  width: fit-content;
+  margin: auto;
+  padding: 0.2em 0.4em;
+  border-radius: var(--radius-main);
 }
 
 /* Конец */
@@ -265,18 +311,12 @@
 
 /* Конец */
 
-/* Входная секция с большой ч/б картинкой и текстом по центру */
-
-.black-and-white .cover-image--fullpage {
-  filter: grayscale(100%);
-}
-
-/* Конец */
 
 /* Секция с текстом лида */
 
 .article-lead {
-  padding-top: 7%;
+  margin-top: calc(5 * var(--size-unit));
+  margin-bottom: calc(3 * var(--size-unit));
 }
 
 .lead-paragraph {
@@ -298,7 +338,7 @@
 .vertical-photo-and-text {
   display: flex;
   gap: clamp(0.5rem, -0.2143rem + 3.5714vw, 3rem);
-  padding: 7% 8.5% 1.16%;
+  padding: calc(4 * var(--size-unit)) 8.5% 0;
 }
 
 .image-box {
@@ -322,6 +362,7 @@
   max-width: 620px;
   font-size: clamp(0.625rem, 0.4464rem + 0.8929vw, 1.25rem);
   line-height: 1.5;
+  font-variation-settings: "wght" 150;
 }
 
 .text-box .image-description-paragraph:not(:last-of-type) {
@@ -354,7 +395,8 @@
 .horizontal-photo-and-text {
   display: flex;
   gap: clamp(0.5rem, -0.2143rem + 3.5714vw, 3rem);
-  padding: 7% 8.5% 1.16%;
+  padding: 0 8.5%;
+  margin-top: calc(4 * var(--size-unit));
 }
 
 .horizontal-photo-and-text .image-for-text {
@@ -380,8 +422,31 @@
 
 /* Секция с заголовком и разными текстовыми элементами, но всегда с заголовком */
 
+.big-heading-and-text {
+  margin-top: calc(3 * var(--size-unit));
+}
+
+.big-heading-and-text .heading-big {
+  width: var(--inner-width-large);
+  margin-right: auto;
+  margin-bottom: var(--size-unit);
+  margin-left: auto;
+  font-size: var(--heading-size-l);
+  line-height: 1.1;
+  font-variation-settings: var(--heading-weight-l);
+}
+
+.big-heading-and-text-paragraph {
+  width: var(--inner-width-large);
+  margin-right: auto;
+  margin-left: auto;
+  font-size: clamp(0.625rem, 0.4464rem + 0.8929vw, 1.25rem);
+  line-height: 1.5;
+  font-variation-settings: "wght" 150;
+}
+
 .heading-and-text {
-  padding-top: 5%;
+  margin-top: calc(4 * var(--size-unit));
 }
 
 .heading-and-text .heading-medium {
@@ -418,9 +483,9 @@
 
 .quote {
   position: relative;
-  width: var(--inner-width-main);
-  margin-top: 7%;
-  margin-bottom: 5%;
+  width: var(--inner-width-over-content);
+  margin-top: calc(6 * var(--size-unit));
+  margin-bottom: calc(5 * var(--size-unit));
   margin-right: auto;
   margin-left: auto;
   padding-top: 1rem;
@@ -447,6 +512,10 @@
   width: var(--inner-width-main);
   margin-right: auto;
   margin-left: auto;
+}
+
+.single-text-box.common-font .single-paragraph {
+  font-variation-settings: inherit;
 }
 
 .single-paragraph {
@@ -501,7 +570,34 @@
   width: 100%;
 }
 
+.image-block-full-page {
+  margin-top: calc(2 * var(--size-unit));
+}
 .image-block-full-page .caption {
+  margin-top: clamp(0.5rem, 0.4286rem + 0.3571vw, 0.75rem);
+}
+
+.image-block-medium {
+  width: var(--inner-width-over-content);
+  margin-top: calc(2 * var(--size-unit));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Конец */
+
+/* Блок с картинкой в ширину контента и подписью */
+
+.picture-content-size {
+  display: block;
+  width: var(--inner-width-main);
+  margin: auto;
+}
+
+.image-block-content-size {
+  margin-top: calc(2 * var(--size-unit));
+}
+.image-block-content-size .caption {
   margin-top: clamp(0.5rem, 0.4286rem + 0.3571vw, 0.75rem);
 }
 
@@ -568,7 +664,9 @@
 /* Конец */
 
 /* Карточка автора */
-
+.author-block {
+  margin-top: calc(4 * var(--size-unit));
+}
 .author-content {
   position: relative;
   width: 50%;
@@ -592,11 +690,10 @@
 
 .author-heading {
   margin-bottom: clamp(0.5rem, 0.4286rem + 0.3571vw, 0.75rem);
-  font-family: KyivTypeSerif, serif;
   font-size: clamp(1.5rem, 1.0714rem + 2.1429vw, 3rem);
-  letter-spacing: 0.06em;
-  font-variation-settings: "wght" 700;
+  letter-spacing: 0.02em;
   font-feature-settings: "ss01" on;
+  font-variation-settings: "wght" 840, "CONT" 0, "MIDL" -800;
 }
 
 .author-description {
@@ -618,12 +715,79 @@
 
 /* Слайдер */
 
+.swiper {
+  height: 100%;
+}
+
 .slider-box {
   position: relative;
+  margin-top: calc(2 * var(--size-unit));
+}
+
+.slider-box.text-slider .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--accent-color);
+  color: #fff;
+  border-radius: var(--radius-main);
+  position: relative;
+  padding: calc(5 * var(--size-unit)) calc(2 * var(--size-unit)) calc(3 * var(--size-unit));
+  aspect-ratio: 3/2;
+}
+
+@media screen and (max-width: 600px) {
+  .slider-box.text-slider .swiper-slide {
+    padding: calc(1.5 * var(--size-unit));
+  }
+}
+
+.slider-box.text-slider .swiper-slide p, .slider-box.text-slider .swiper-slide .heading-small {
+  width: 100%;
+}
+
+
+.slider-box.text-slider {
+  height: 600px;
+}
+
+@media screen and (max-width: 600px) {
+  .slider-box.text-slider {
+    height: 450px;
+  }
+}
+
+.slider-box.text-slider .swiper-slide::before {
+  content: 'комментарий психолога';
+  position: absolute;
+  top: calc(2 * var(--size-unit));
+  left: calc(2 * var(--size-unit) - 0.9em);
+  background-color: #fff;
+  color: var(--text-color-main);
+  padding: .5em .9em;
+  border-radius: var(--radius-main);
+  line-height: 1;
+  font-size: clamp(0.625rem, 0.5572rem + 0.339vw, 0.875rem);
+}
+
+
+
+.slider-box.text-slider.text-slider-ua .swiper-slide::before {
+  content: 'коментар психолога';
+}
+
+.slider-box.text-slider .swiper-pagination {
+  z-index: 1;
+  padding-right: calc(1.2 * var(--size-unit));
+  margin-top: 0;
 }
 
 .swiper {
-  width: var(--slider-width);
+  --swiper-pagination-bullet-size: 8px; 
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+
+  width: var(--inner-width-over-content);
   margin: auto;
 }
 
@@ -642,27 +806,53 @@
   position: relative;
   margin-top: var(--size-unit);
   text-align: right;
+  transform: translateY(calc(-100% - 0.5*var(--size-unit)));
 }
 
 .swiper-pagination-bullet {
-  border-radius: 0;
+  border-radius: 2px;
   opacity: 0.2;
   background-color: var(--text-color-main);
-  transform: rotate(45deg);
+  transition: transform .4s, opacity .4s;
 }
 
 .swiper-pagination-bullet-active {
-  opacity: 1;
+  opacity: 0.6;
+  transform: rotate(135deg);
+}
+
+@media screen and (max-width: 650px) {
+  .swiper {
+    --swiper-pagination-bullet-size: 6px; 
+    --swiper-pagination-bullet-horizontal-gap: 2px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -1em;
+    text-align: center;
+  }
+
+  .swiper .caption {
+    margin-top: calc(var(--size-unit) * 0.5);
+    text-align: center;
+  }
 }
 
 .swiper-button-next,
 .swiper-button-prev {
   width: 12.8%;
-  height: 12.8%;
+  height: calc(100% - 2em);
+  top: calc(50% - 2em);
   margin-top: 0;
   border: none;
   background-color: transparent;
   transform: translateY(-50%);
+  font-size: var(--text-caption);
 }
 
 .swiper-button-next {
@@ -675,22 +865,54 @@
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
+  position: absolute;
   content: "";
-  right: 0;
-  width: 100%;
+  width: 0.8em;
   height: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-}
-
-.swiper-button-next::after {
-  background-image: url(../images/icons/next.svg);
+  transition: transform .5s;
 }
 
 .swiper-button-prev::after {
   background-image: url(../images/icons/prev.svg);
+  transform: translateX(-4px);
 }
+
+.swiper-button-next::after {
+  background-image: url(../images/icons/next.svg);
+  transform: translateX(4px);
+}
+
+.swiper-form  {
+  opacity: 0;
+  width: 8em;
+  transition: opacity .2s, transform .5s;
+}
+
+.swiper-button-next:hover .swiper-form,
+.swiper-button-prev:hover .swiper-form{
+  opacity: 1;
+  transform: rotate(360deg);
+}
+
+.swiper-button-prev:hover .swiper-form{
+  transform: translateX(-14px) rotate(-180deg);
+}
+
+.swiper-button-next:hover .swiper-form{
+  transform: translateX(14px) rotate(180deg);
+}
+
+.swiper-button-prev:hover::after {
+  transform: translateX(-14px);
+}
+
+.swiper-button-next:hover::after {
+  transform: translateX(14px);
+}
+
 
 /* Конец */
 
@@ -765,6 +987,108 @@
 
 /* Конец */
 
+/* О проекте */
+.about {
+  padding-top: calc(2 * var(--size-unit));
+}
+.about-heading {
+  width: var(--inner-width-main);
+  margin-bottom: calc(2 * var(--size-unit));
+  margin: auto;
+  color: var(--text-color-main);
+  font-size: var(--heading-size-l);
+  line-height: 1;
+  font-variation-settings: var(--heading-weight-l);
+}
+.about-lead {
+  width: var(--inner-width-main);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: calc(3 * var(--size-unit));
+  font-size: clamp(0.75rem, 0.5357rem + 1.0714vw, 1.5rem);
+  line-height: 1.5;
+  font-variation-settings: "wght" 500;
+}
+.about-paragraph {
+  width: var(--inner-width-main);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: calc(2 * var(--size-unit));
+  font-size: clamp(0.625rem, 0.4464rem + 0.8929vw, 1.25rem);
+  line-height: 1.5;
+  font-variation-settings: "wght" 150;
+}
+.about-second-heading {
+  width: var(--inner-width-main);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: calc(4 * var(--size-unit));
+  font-size: clamp(1.25rem, 0.75rem + 2.5vw, 3rem);
+  font-variation-settings: "wght" 700;
+  line-height: 1;
+}
+/* Конец */
+
+/* Советы психолога */
+.advice-section {
+  position: relative;
+  width: var(--inner-width-over-content);
+  padding: calc(3 * var(--size-unit)) calc(2 * var(--size-unit));
+  margin-top: calc(5 * var(--size-unit));
+  border-radius: var(--radius-main);
+  border: 2px solid var(--accent-color);
+}
+.advice-section-badge {
+  position: absolute;
+  top: 0;
+  padding: 0.4em 1em;
+  font-size: clamp(0.625rem, 0.4464rem + 0.8929vw, 1.25rem);
+  line-height: 1.5;
+  font-variation-settings: "wght" 300;
+  background: #F5F5F5;
+  color: var(--accent-color);
+  transform: translate(-1em, calc(-50% - 2px));
+}
+.advice-section-heading:not(:first-of-type) {
+  margin-top: calc(3 * var(--size-unit));
+}
+.advice-section-heading {
+  font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+  line-height: 1.2;
+  font-variation-settings: "wght" 700;
+}
+.advice-section-paragraph {
+  margin-top: var(--size-unit);
+  font-size: clamp(0.625rem, 0.4464rem + 0.8929vw, 1.25rem);
+  line-height: 1.5;
+  font-variation-settings: "wght" 150;
+}
+.advice-section .list-box {
+  width: auto;
+}
+/* Конец */
+
+/* Видео */
+.video {
+  margin-top: calc(2 * var(--size-unit));
+  margin-bottom: calc(4 * var(--size-unit));
+  border-radius: var(--radius-main);
+  overflow: hidden;
+  font-size: 0;
+}
+
+.video-medium {
+  width: var(--inner-width-over-content);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video-medium video {
+  width: 100%;
+  border-radius: var(--radius-main);
+}
+/* Конец */
+
 /* BOX */
 
 .mt-1 {
@@ -781,6 +1105,12 @@
 
 .mt-4 {
   margin-top: calc(4 * var(--size-unit));
+}
+.mt-5 {
+  margin-top: calc(5 * var(--size-unit));
+}
+.mt-6 {
+  margin-top: calc(6 * var(--size-unit));
 }
 
 .mb-1 {
