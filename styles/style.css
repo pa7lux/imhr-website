@@ -478,7 +478,7 @@
 
 .quote {
   position: relative;
-  width: var(--inner-width-main);
+  width: var(--inner-width-over-content);
   margin-top: calc(6 * var(--size-unit));
   margin-bottom: calc(5 * var(--size-unit));
   margin-right: auto;
@@ -779,7 +779,10 @@
 }
 
 .swiper {
-  width: var(--inner-width-main);
+  --swiper-pagination-bullet-size: 8px; 
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+
+  width: var(--inner-width-over-content);
   margin: auto;
 }
 
@@ -814,9 +817,24 @@
 }
 
 @media screen and (max-width: 650px) {
+  .swiper {
+    --swiper-pagination-bullet-size: 6px; 
+    --swiper-pagination-bullet-horizontal-gap: 2px;
+  }
+
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -1em;
+    text-align: center;
+  }
+
+  .swiper .caption {
+    margin-top: calc(var(--size-unit) * 0.5);
+    text-align: center;
   }
 }
 
@@ -824,7 +842,7 @@
 .swiper-button-prev {
   width: 12.8%;
   height: calc(100% - 2em);
-  top: calc(50% - 1em);
+  top: calc(50% - 2em);
   margin-top: 0;
   border: none;
   background-color: transparent;
