@@ -1058,6 +1058,9 @@
   line-height: 1.5;
   font-variation-settings: "wght" 150;
 }
+.advice-section .list-box {
+  width: auto;
+}
 /* Конец */
 
 /* Видео */
