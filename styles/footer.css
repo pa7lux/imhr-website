@@ -1,11 +1,15 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  font-size: clamp(0.25rem, 0.0466rem + 1.0169vw, 1rem);
+  font-size: clamp(0.6rem, 0.0466rem + 1.0169vw, 1rem);
 }
 
 .footer--index {
   margin-top: calc(10*var(--size-unit));
+}
+
+.thanks {
+  text-align: right;
 }
 
 @media screen and (max-width: 800px) {
