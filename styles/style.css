@@ -1085,6 +1085,16 @@
   margin-top: calc(2 * var(--size-unit));
 }
 
+.video-medium.soundcloud {
+  aspect-ratio: auto;
+}
+
+.video-medium.soundcloud iframe {
+  height: auto;
+  aspect-ratio: initial;
+  border-radius: 0;
+}
+
 .video-medium iframe {
   width: 100%;
   height: 100%;
