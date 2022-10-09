@@ -143,6 +143,12 @@
   }
 }
 
+@media screen and (max-width: 350px) {
+  .main-menu {
+    font-size: clamp(0.77rem, -0.25rem + 2.5vw, 1rem);
+  }
+}
+
 .lang-menu {
   font-variation-settings: "wght" 0;
   font-size: clamp(1rem, 0.7322rem + 0.339vw, 1.25rem);

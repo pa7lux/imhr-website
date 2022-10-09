@@ -573,7 +573,7 @@
 }
 
 .image-block-medium {
-  width: calc(var(--content-section-width-main) / 100 * 65.84);
+  width: var(--inner-width-over-content);
   margin-top: calc(2 * var(--size-unit));
   margin-left: auto;
   margin-right: auto;
@@ -1009,7 +1009,7 @@
 /* Советы психолога */
 .advice-section {
   position: relative;
-  width: calc(var(--content-section-width-main) / 100 * 65.84);
+  width: var(--inner-width-over-content);
   padding: calc(3 * var(--size-unit)) calc(2 * var(--size-unit));
   margin-top: calc(5 * var(--size-unit));
   border-radius: var(--radius-main);
@@ -1052,7 +1052,7 @@
 }
 
 .video-medium {
-  width: 65.84%;
+  width: var(--inner-width-over-content);
   margin-left: auto;
   margin-right: auto;
 }
