@@ -51,11 +51,16 @@
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   width: 26.2%;
   background-color: var(--text-color-main);
   transform: translateY(calc(-220%));
   aspect-ratio: 180/24;
+}
+
+.article-cover-two-columns--reversed .heading-large::before {
+  right: 0;
+  left: initial;
 }
 
 .heading-medium {
