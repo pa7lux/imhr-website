@@ -132,7 +132,7 @@
 }
 
 .menu-list-item:not(.menu-list-item--active):hover::after {
-  transform: translateY(calc(100% + (0.5 * var(--size-unit)))) scaleX(1);
+  transform: scaleX(1);
 }
 
 .main-menu {
