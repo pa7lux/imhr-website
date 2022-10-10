@@ -17,12 +17,12 @@
   --right-arrow-shift: 10%;
   --left-arrow-shift: 10%;
 
-  /* ТИПОГРАФИКА */
-  --font-main: kyivtype, sans-serif;
-  --heading-weight-l: "wght" 840, "CONT" 0, "MIDL" -1000;
-  --heading-size-l: clamp(1.25rem, 0.0357rem + 6.0714vw, 5.5rem);
-  --text-color-main: #001d3d;
-  --link-color-default: #0975e8;
+  /* ОТСТУПЫ */
+  --space-m: 16px;
+  --space-l: 20px;
+  --space-xl: 24px;
+  --space-2xl: 32px;
+  --space-3xl: 40px;
 }
 
 .theme-turquoise {
@@ -67,7 +67,6 @@
     --slider-width: 90%;
     --right-arrow-shift: -2%;
     --left-arrow-shift: -3%;
-    --heading-size-l: clamp(1.25rem, 0.57rem + 6.0714vw, 5.5rem);
     --text-caption: clamp(0.625rem, 0.5179rem + 0.5357vw, 1rem);
   }
 }

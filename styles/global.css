@@ -49,5 +49,5 @@ select {
 }
 
 body {
-  color: var(--text-color-main);
+  color: var(--text-color-primary);
 }

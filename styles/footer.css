@@ -1,7 +1,10 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  font-size: clamp(0.6rem, 0.0466rem + 1.0169vw, 1rem);
+  font-size: var(--text-size-s);
+  font-variation-settings: var(--text-weight-normal);
+  line-height: 1.5;
+  color: var(--text-color-primary);
 }
 
 .footer--index {
@@ -9,6 +12,7 @@
 }
 
 .thanks {
+  max-width: 30ch;
   text-align: right;
 }
 
