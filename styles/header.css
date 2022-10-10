@@ -18,7 +18,6 @@
   grid-area: menu;
   width: 100%;
   white-space: nowrap;
-  overflow-x: scroll;
 }
 
 .header-lang {
