@@ -82,10 +82,6 @@ body {
   color: white;;
 }
 
-.stories {
-  padding-top: calc(4 * var(--size-unit));
-}
-
 .stories-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -100,25 +96,8 @@ body {
   }
 }
 
-.story {
-  aspect-ratio: 433/236;
-}
-
-@media screen and (max-width: 600px) {
-  .story {
-    aspect-ratio: initial;
-  }
-}
-
 .story--large {
   grid-row: span 2;
-  aspect-ratio: initial;
-}
-
-@media screen and (max-width: 600px) {
-  .story--large {
-    aspect-ratio: initial;
-  }
 }
 
 .story--large .story-info {

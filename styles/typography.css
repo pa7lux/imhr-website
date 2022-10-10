@@ -15,7 +15,7 @@
   --text-color-primary: #001d3d;
   --text-color-secondary: hsla(211, 100%, 12%, 0.6);
   --text-color-link: #0975e8;
-  --text-color-link-hover: #0975e8;
+  --text-color-link-hover: hsla(211, 93%, 47%, 0.6);
   
   /* жирности */
   --text-weight-black: "wght" 840, "CONT" 0, "MIDL" -1000;
@@ -51,6 +51,9 @@
 .text-type-h3:not(:last-child) {
   margin-bottom: var(--space-m);
 }
+.text-type-h3:not(:first-child) {
+  margin-top: var(--space-3xl);
+}
 
 .text-type-lead {
   font-size: var(--text-size-l);
@@ -68,7 +71,7 @@
   line-height: 1.5;
   color: var(--text-color-primary);
 }
-.text-type-p:not(:last-child) {
+.text-type-p:not(:last-of-type) {
   margin-bottom: var(--space-m);
 }
 
@@ -79,11 +82,34 @@
   line-height: 1.5;
   color: var(--text-color-primary);
 }
+.text-type-list li:not(:last-of-type) {
+  margin-bottom: var(--space-m);
+}
+.text-type-list:not(:last-child) {
+  margin-bottom: var(--space-m);
+}
+.text-type-list--unordered li {
+  padding-left: 0.3em;
+}
+.text-type-list--unordered li::marker {
+  content: "•";
+}
 
 .text-type-quote {
+  position: relative;
+  padding-top: var(--space-3xl);
   font-size: var(--text-size-2xl);
   font-variation-settings: var(--text-weight-black);
   color: var(--text-color-primary);
+}
+.text-type-quote::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15%;
+  background-color: var(--text-color-primary);
+  aspect-ratio: 148/16;
 }
 
 .text-type-caption {
@@ -99,6 +125,15 @@
 
 .text-view-secondary {
   color: var(--text-color-secondary);
+}
+
+.text-view-link {
+  color: var(--text-color-link);
+  transition: opacity .25s;
+}
+
+.text-view-link:hover {
+  color: var(--text-color-link-hover);
 }
 
 .text-weight-black {
@@ -119,4 +154,16 @@
 
 .text-weight-light {
   font-variation-settings: var(--text-weight-light);
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
 }

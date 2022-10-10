@@ -11,7 +11,12 @@ body {
   font-family: var(--font-main);
   font-feature-settings: "ss01" on;
   background-color: #F5F5F5;
-  padding: clamp(0.5rem, 0.2288rem + 1.3559vw, 1.5rem) clamp(0.625rem, 0.1674rem + 2.2881vw, 2.3125rem) clamp(0.75rem, 0.2754rem + 2.3729vw, 2.5rem);
+  padding: var(--space-xl) var(--space-3xl);
+}
+@media (max-width: 1024px) {
+  body {
+    padding: var(--space-m) var(--space-l);
+  }
 }
 
 h1,

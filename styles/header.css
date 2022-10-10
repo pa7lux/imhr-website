@@ -1,7 +1,8 @@
 .header {
   display: flex;
-  gap: calc(3*var(--size-unit));
+  gap: var(--space-2xl);
   align-items: baseline;
+  margin-bottom: var(--space-xl);
 }
 
 @media screen and (max-width: 800px) {
@@ -10,7 +11,7 @@
     grid-template-areas:
         "logo . lang"
         "menu menu menu";
-    gap: calc(1.5 * var(--size-unit));
+    gap: var(--space-l);
   }
 }
 
@@ -31,12 +32,12 @@
 }
 
 .header--inner {
-  margin-bottom: calc(5*var(--size-unit));
+  margin-bottom: var(--space-3xl);
 }
 
 @media screen and (max-width: 800px) {
   .header--inner {
-    margin-bottom: calc(3*var(--size-unit));
+    margin-bottom: var(--space-xl);
   }
 }
 
@@ -55,14 +56,10 @@
 .header nav ul {
   list-style: none;
   display: flex;
-  font-variation-settings: "wght" 150;
-}
-
-.main-menu {
 }
 
 .menu-list {
-  gap: calc(3*var(--size-unit));
+  gap: var(--space-2xl);
 }
 
 .menu-list-item {
@@ -88,7 +85,7 @@
 
 @media screen and (max-width: 600px) {
   .menu-list {
-    gap: calc(2*var(--size-unit));
+    gap: var(--space-m);
   }
 }
 
@@ -136,6 +133,7 @@
 }
 
 .main-menu {
+  font-variation-settings: var(--text-weight-light);
   font-size: var(--text-size-m);
 }
 
