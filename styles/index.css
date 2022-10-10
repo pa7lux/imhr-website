@@ -51,20 +51,11 @@ body {
 }
 
 .cover-title {
-  font-size: var(--heading-size-l);
-  font-size: clamp(1rem, -0.6271rem + 8.1356vw, 7rem);
-  line-height: 0.9;
-  font-variation-settings: var(--heading-weight-l);
   margin-bottom: var(--size-unit);
   position: relative;
   width: fit-content;
   margin-left: -0.08em;
-}
-
-@media screen and (max-width: 600px) {
-  .cover-title {
-    font-size: clamp(1rem, -0.4271rem + 18.1356vw, 7rem);
-  }
+  color: white;
 }
 
 .cover-title::after {
@@ -88,15 +79,7 @@ body {
 
 .cover-subheading {
   opacity: 0.8;
-  font-size: clamp(0.25rem, -0.0212rem + 1.3559vw, 1.25rem);
-  line-height: 1.5;
-  font-variation-settings: "wght" 350;
-}
-
-@media screen and (max-width: 600px) {
-  .cover-subheading {
-    font-size: clamp(0.375rem, 0.2055rem + 3.8475vw, 1rem);
-  }
+  color: white;;
 }
 
 .stories {
@@ -262,46 +245,6 @@ body {
 
 .telegram-link .story-info::before {
   content: none;
-}
-
-
-
-.story-title {
-  font-variation-settings: "wght" 700;
-  font-size: clamp(0.75rem, 0.411rem + 1.6949vw, 2rem);
-  margin-bottom: clamp(0.5rem, 0.2288rem + 1.3559vw, 1.5rem);
-}
-
-@media screen and (max-width: 800px) {
-  .story-title {
-    font-size: clamp(0.75rem, 0.411rem + 1.2vw, 1.4rem);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .story-title {
-    font-size: clamp(1rem, 0.7rem + 3.6949vw, 2rem);
-    margin-bottom: 1.5rem;
-  }
-}
-
-.story-author {
-  font-variation-settings: "wght" 150;
-  font-size: clamp(0.375rem, 0.2055rem + 0.8475vw, 1rem);
-  opacity: .5;
-}
-
-@media screen and (max-width: 600px) {
-  .story-author {
-    font-variation-settings: "wght" 150;
-    font-size: clamp(0.375rem, 0.2055rem + 3.8475vw, 1rem);
-    opacity: .5;
-  }
-}
-
-
-.thanks {
-  text-align: right;
 }
 
 
